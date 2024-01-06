@@ -2,7 +2,7 @@
 @use './fonts';
 @use './styles';
 @use './variables';
-@use './breakpoint';
+@use './breakpoints';
 
 .intro {
     width: 100%;
@@ -79,9 +79,9 @@
         }
 
         &__image {
-            width: 4.8rem;
             height: 4.6rem;
             font-size: 2rem;
+            min-width: 4.8rem;
             text-align: center;
             line-height: 3.6rem;
             align-items: center;
@@ -165,6 +165,120 @@
             img {
                 cursor: pointer;
             }
+        }
+    }
+}
+
+@include breakpoints.mq(tablet) {
+    .intro {
+        height: 54.1rem;
+        background-size: auto;
+        padding: 3.2rem 3.9rem 0 3.9rem;
+        background-position: -22.625rem 7.112rem, calc(100% + 9.368rem) 25rem, 0 0;
+        background-image: url("/assets/images/bg-pattern-1.svg"),
+            url("/assets/images/bg-pattern-2.svg"),
+            url("/assets/images/bg-black-tablet.svg");
+
+        .content {
+            .title {
+                width: 40rem;
+                margin: 0 auto;
+                font-size: 6rem;
+                line-height: 6rem;
+                margin-top: 5.6rem;
+
+                &--highlight {
+                    &::after {
+                        bottom: 0.5rem;
+                    }
+                }
+            }
+
+            .button--primary {
+                margin-top: 3.9rem;
+            }
+        }
+
+        .phone {
+            width: 51.4rem;
+            height: 29.6rem;
+            margin-top: 5.5rem;
+        }
+    }
+
+    .list {
+        top: 0;
+        margin-top: -14rem;
+        height: 92.0725rem;
+        padding-top: 34rem;
+        background-image: url("/assets/images/bg-gray-tablet.svg");
+
+        .item {
+            gap: 3.2rem;
+            display: flex;
+            width: 55.8rem;
+            margin: 0 auto;
+            align-items: center;
+            flex-direction: row;
+
+            &:not(&:last-child) {
+                margin-bottom: 4.8rem;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            > div {
+                text-align: left;
+            }
+
+            &__title {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .access {
+        top: 0;
+        padding: 10rem 4rem 12.2rem 4rem;
+
+        &__founder {
+            display: flex;
+            align-items: flex-start;
+
+            .founder {
+                margin: 0;
+            }
+
+            .card {
+                top: 0;
+                padding: 5.6rem;
+                text-align: left;
+                padding-top: 4.8rem;
+                margin-top: 14.05rem;
+                margin-left: -10.5rem;
+                background-repeat: no-repeat;
+
+                &::after {
+                    right: 0.75rem;
+                    bottom: -7.125rem;
+                    position: absolute;
+                    content: url("/assets/images/bg-pattern-3.svg");
+                }
+
+                .title {
+                    font-size: 4.8rem;
+                }
+        
+                .text {
+                    margin-top: 2.4rem;
+                }
+            }
+        }
+
+        .social {
+            margin-top: 8rem;
         }
     }
 }

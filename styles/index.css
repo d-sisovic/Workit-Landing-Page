@@ -158,9 +158,9 @@ img {
   padding-bottom: 7.171rem;
 }
 .list .item__image {
-  width: 4.8rem;
   height: 4.6rem;
   font-size: 2rem;
+  min-width: 4.8rem;
   text-align: center;
   line-height: 3.6rem;
   align-items: center;
@@ -234,4 +234,94 @@ img {
 }
 .access .social__icon img {
   cursor: pointer;
+}
+
+@media (min-width: 48em) {
+  .intro {
+    height: 54.1rem;
+    background-size: auto;
+    padding: 3.2rem 3.9rem 0 3.9rem;
+    background-position: -22.625rem 7.112rem, calc(100% + 9.368rem) 25rem, 0 0;
+    background-image: url("/assets/images/bg-pattern-1.svg"), url("/assets/images/bg-pattern-2.svg"), url("/assets/images/bg-black-tablet.svg");
+  }
+  .intro .content .title {
+    width: 40rem;
+    margin: 0 auto;
+    font-size: 6rem;
+    line-height: 6rem;
+    margin-top: 5.6rem;
+  }
+  .intro .content .title--highlight::after {
+    bottom: 0.5rem;
+  }
+  .intro .content .button--primary {
+    margin-top: 3.9rem;
+  }
+  .intro .phone {
+    width: 51.4rem;
+    height: 29.6rem;
+    margin-top: 5.5rem;
+  }
+  .list {
+    top: 0;
+    margin-top: -14rem;
+    height: 92.0725rem;
+    padding-top: 34rem;
+    background-image: url("/assets/images/bg-gray-tablet.svg");
+  }
+  .list .item {
+    gap: 3.2rem;
+    display: flex;
+    width: 55.8rem;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: row;
+  }
+  .list .item:not(.list .item:last-child) {
+    margin-bottom: 4.8rem;
+  }
+  .list .item:last-child {
+    padding-bottom: 0;
+  }
+  .list .item > div {
+    text-align: left;
+  }
+  .list .item__title {
+    margin-top: 0;
+  }
+  .access {
+    top: 0;
+    padding: 10rem 4rem 12.2rem 4rem;
+  }
+  .access__founder {
+    display: flex;
+    align-items: flex-start;
+  }
+  .access__founder .founder {
+    margin: 0;
+  }
+  .access__founder .card {
+    top: 0;
+    padding: 5.6rem;
+    text-align: left;
+    padding-top: 4.8rem;
+    margin-top: 14.05rem;
+    margin-left: -10.5rem;
+    background-repeat: no-repeat;
+  }
+  .access__founder .card::after {
+    right: 0.75rem;
+    bottom: -7.125rem;
+    position: absolute;
+    content: url("/assets/images/bg-pattern-3.svg");
+  }
+  .access__founder .card .title {
+    font-size: 4.8rem;
+  }
+  .access__founder .card .text {
+    margin-top: 2.4rem;
+  }
+  .access .social {
+    margin-top: 8rem;
+  }
 }/*# sourceMappingURL=index.css.map */
