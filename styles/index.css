@@ -1,0 +1,237 @@
+*,
+::after,
+::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Fraunces 144-SemiBold";
+  src: url("../assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("../assets/fonts/manrope/static/Manrope-Regular.ttf");
+}
+.heading--l {
+  font-size: 8rem;
+  line-height: 8rem;
+  font-family: "Fraunces 144-SemiBold";
+}
+
+.heading--m {
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+  font-family: "Fraunces 144-SemiBold";
+}
+
+.heading--s {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-family: "Fraunces 144-SemiBold";
+}
+
+.body {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-family: "Manrope-Regular";
+}
+
+.button--primary {
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  letter-spacing: -0.16px;
+  color: #24053E;
+  font-family: "Manrope-Regular";
+  background: #44FFA1;
+  padding: 1.1rem 2.4rem 1.2rem 2.3rem;
+}
+.button--primary:hover {
+  color: #44FFA1;
+  background: #24053E;
+  outline: 0.2rem solid #44FFA1;
+}
+
+.button--secondary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-style: normal;
+  position: relative;
+  line-height: 3.2rem;
+  color: #FFFFFF;
+  font-family: "Manrope-Regular";
+}
+.button--secondary::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  height: 0.3rem;
+  display: block;
+  background: #44FFA1;
+}
+.button--secondary:hover {
+  color: #44FFA1;
+}
+
+.intro {
+  width: 100%;
+  height: 48.1707rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3.7rem 1.53rem 0 1.6rem;
+  background-image: url("/assets/images/bg-black.svg");
+}
+.intro .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.intro .content {
+  text-align: center;
+}
+.intro .content .title {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 5rem;
+  text-align: center;
+  margin-top: 6.4rem;
+  color: #FFFFFF;
+  font-family: "Fraunces 144-SemiBold";
+}
+.intro .content .title--highlight {
+  position: relative;
+}
+.intro .content .title--highlight::after {
+  left: 0;
+  right: 0;
+  content: "";
+  height: 0.3rem;
+  bottom: 0.3rem;
+  position: absolute;
+  background: #44FFA1;
+}
+.intro .content .button--primary {
+  margin-top: 4rem;
+}
+.intro .phone {
+  margin: 0 auto;
+  margin-top: 6.4rem;
+}
+
+.list {
+  top: -2rem;
+  width: 100%;
+  z-index: -1;
+  height: 107.1rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  position: relative;
+  padding-top: 18.1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/assets/images/bg-gray.svg");
+}
+.list .item:not(.list .item:last-child) {
+  margin-bottom: 4rem;
+}
+.list .item:last-child {
+  padding-bottom: 7.171rem;
+}
+.list .item__image {
+  width: 4.8rem;
+  height: 4.6rem;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3.6rem;
+  align-items: center;
+  display: inline-flex;
+  border-radius: 3.05rem;
+  justify-content: center;
+  font-family: "Fraunces 144-SemiBold";
+  border: 0.1rem solid #584D62;
+}
+.list .item__title {
+  font-size: 2.8rem;
+  margin-top: 2.4rem;
+  line-height: 3.6rem;
+  margin-bottom: 1.6rem;
+  color: #24053E;
+  font-family: "Fraunces 144-SemiBold";
+}
+.list .item__text {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #584D62;
+  font-family: "Manrope-Regular";
+}
+
+.access {
+  top: -2rem;
+  position: relative;
+  padding: 10.029rem 1.6rem 6.4rem 1.6rem;
+}
+.access .founder {
+  margin: 0 auto;
+}
+.access .card {
+  top: -5.3rem;
+  position: relative;
+  text-align: center;
+  padding: 3.2rem 3.1rem;
+  background: #24053E;
+}
+.access .card .title {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  color: #FFFFFF;
+  font-family: "Fraunces 144-SemiBold";
+}
+.access .card .text {
+  font-size: 1.6rem;
+  margin-top: 1.6rem;
+  line-height: 2.8rem;
+  margin-bottom: 2.4rem;
+  color: #FFFFFF;
+  font-family: "Manrope-Regular";
+}
+.access .social {
+  display: flex;
+  width: 11.6rem;
+  height: 10.3rem;
+  margin-left: auto;
+  margin-top: 2.1rem;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.access .social .logo {
+  margin: 0 auto;
+}
+.access .social__icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.access .social__icon img {
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
