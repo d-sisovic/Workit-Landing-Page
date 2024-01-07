@@ -196,7 +196,7 @@
         height: calc(54.1rem - 10.5rem);
         padding: 3.2rem 3.9rem 0 3.9rem;
         background-position: -22.625rem 7.112rem, calc(100% + 9.368rem) 25rem;
-        background-image: url("/assets/images/bg-pattern-1.svg"), url("/assets/images/bg-pattern-2.svg");
+        background-image: url("assets/images/bg-pattern-1.svg"), url("assets/images/bg-pattern-2.svg");
 
         .curve {
             height: 14rem;
@@ -287,7 +287,7 @@
                     right: 0.75rem;
                     bottom: -11.125rem;
                     position: absolute;
-                    content: url("/assets/images/bg-pattern-3.svg");
+                    content: url("assets/images/bg-pattern-3.svg");
                 }
 
                 .title {
