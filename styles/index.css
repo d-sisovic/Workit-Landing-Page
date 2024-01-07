@@ -58,7 +58,7 @@ img {
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 3.2rem;
-  letter-spacing: -0.16px;
+  letter-spacing: 0.0334rem;
   color: #24053E;
   font-family: "Manrope-Regular";
   background: #44FFA1;
@@ -78,6 +78,7 @@ img {
   position: relative;
   line-height: 3.2rem;
   color: #FFFFFF;
+  letter-spacing: 0.028rem;
   font-family: "Manrope-Regular";
 }
 .button--secondary::after {
@@ -93,13 +94,34 @@ img {
   color: #44FFA1;
 }
 
+@media (min-width: 90em) {
+  .button--primary {
+    font-size: 1.8rem;
+    letter-spacing: 0.04rem;
+    padding: 1.3rem 3.2rem 1.6rem 3.2rem;
+  }
+  .button--secondary {
+    font-size: 1.8rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.0276rem;
+  }
+}
 .intro {
+  position: relative;
+  padding: 3.2rem 1.53rem 0 1.6rem;
+  height: 43.2207rem;
+  background: #24053E;
+}
+.intro .curve {
+  left: 0;
+  bottom: 0;
+  z-index: 1;
   width: 100%;
-  height: 48.1707rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 3.7rem 1.53rem 0 1.6rem;
-  background-image: url("/assets/images/bg-black.svg");
+  bottom: -6.6rem;
+  position: absolute;
+}
+.intro .curve path {
+  fill: #24053E;
 }
 .intro .heading {
   display: flex;
@@ -134,28 +156,34 @@ img {
   margin-top: 4rem;
 }
 .intro .phone {
+  z-index: 2;
+  width: 32rem;
   margin: 0 auto;
   margin-top: 6.4rem;
+  position: relative;
 }
 
 .list {
-  top: -2rem;
   width: 100%;
-  z-index: -1;
-  height: 107.1rem;
   padding: 0 1.6rem;
   text-align: center;
   position: relative;
-  padding-top: 18.1rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("/assets/images/bg-gray.svg");
+  padding-top: 20.479rem;
+  padding-bottom: 1.65rem;
+  background: #FCF8FF;
 }
-.list .item:not(.list .item:last-child) {
+.list .curve {
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  bottom: -6.6rem;
+  position: absolute;
+}
+.list .curve path {
+  fill: #FCF8FF;
+}
+.list .item:first-child, .list .item:nth-child(2) {
   margin-bottom: 4rem;
-}
-.list .item:last-child {
-  padding-bottom: 7.171rem;
 }
 .list .item__image {
   height: 4.6rem;
@@ -186,12 +214,12 @@ img {
 }
 
 .access {
-  top: -2rem;
-  position: relative;
-  padding: 10.029rem 1.6rem 6.4rem 1.6rem;
+  padding: 14.979rem 1.6rem 6.4rem 1.6rem;
 }
 .access .founder {
+  width: 28.1rem;
   margin: 0 auto;
+  height: 28.1rem;
 }
 .access .card {
   top: -5.3rem;
@@ -238,11 +266,16 @@ img {
 
 @media (min-width: 48em) {
   .intro {
-    height: 54.1rem;
-    background-size: auto;
+    background-size: auto, auto;
+    background-repeat: no-repeat;
+    height: 43.6rem;
     padding: 3.2rem 3.9rem 0 3.9rem;
-    background-position: -22.625rem 7.112rem, calc(100% + 9.368rem) 25rem, 0 0;
-    background-image: url("/assets/images/bg-pattern-1.svg"), url("/assets/images/bg-pattern-2.svg"), url("/assets/images/bg-black-tablet.svg");
+    background-position: -22.625rem 7.112rem, calc(100% + 9.368rem) 25rem;
+    background-image: url("/assets/images/bg-pattern-1.svg"), url("/assets/images/bg-pattern-2.svg");
+  }
+  .intro .curve {
+    height: 14rem;
+    bottom: -13.9rem;
   }
   .intro .content .title {
     width: 40rem;
@@ -263,11 +296,13 @@ img {
     margin-top: 5.5rem;
   }
   .list {
-    top: 0;
-    margin-top: -14rem;
-    height: 92.0725rem;
-    padding-top: 34rem;
-    background-image: url("/assets/images/bg-gray-tablet.svg");
+    padding-bottom: 0;
+    padding-top: 30.876rem;
+    height: 82.6975rem;
+  }
+  .list .curve {
+    bottom: -9.4rem;
+    height: 9.375rem;
   }
   .list .item {
     gap: 3.2rem;
@@ -277,11 +312,8 @@ img {
     align-items: center;
     flex-direction: row;
   }
-  .list .item:not(.list .item:last-child) {
+  .list .item:first-child, .list .item:nth-child(2) {
     margin-bottom: 4.8rem;
-  }
-  .list .item:last-child {
-    padding-bottom: 0;
   }
   .list .item > div {
     text-align: left;
@@ -290,8 +322,7 @@ img {
     margin-top: 0;
   }
   .access {
-    top: 0;
-    padding: 10rem 4rem 12.2rem 4rem;
+    padding: 19.402rem 4rem 12.2rem 4rem;
   }
   .access__founder {
     display: flex;
@@ -311,7 +342,7 @@ img {
   }
   .access__founder .card::after {
     right: 0.75rem;
-    bottom: -7.125rem;
+    bottom: -11.125rem;
     position: absolute;
     content: url("/assets/images/bg-pattern-3.svg");
   }
@@ -323,5 +354,98 @@ img {
   }
   .access .social {
     margin-top: 8rem;
+  }
+}
+@media (min-width: 90em) {
+  .intro {
+    height: 62.5rem;
+    padding: 3.5625rem 11.4583% 0;
+    background-position: top 7.25rem right 86vw, top 19.625rem left 91.3vw;
+  }
+  .intro .curve {
+    height: 26.4rem;
+    bottom: -13.9rem;
+  }
+  .intro .content .title {
+    width: 63.5rem;
+    font-size: 8rem;
+    line-height: 8rem;
+    margin-top: 5.8rem;
+  }
+  .intro .content .button--primary {
+    margin-top: 3.7rem;
+  }
+  .intro .phone {
+    width: 76.7rem;
+    height: 44.1rem;
+    margin-top: 5rem;
+  }
+  .list {
+    gap: 2.6rem;
+    height: auto;
+    display: flex;
+    padding: 35.5rem 11.4583% 2.4375rem;
+  }
+  .list .curve {
+    bottom: -17.1rem;
+    height: 17.1875rem;
+  }
+  .list .item {
+    gap: 5.6rem;
+    width: 35.4rem;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .list .item:first-child, .list .item:nth-child(2) {
+    margin-bottom: 0rem;
+  }
+  .list .item > div {
+    text-align: center;
+  }
+  .list .item__image {
+    height: 5.6rem;
+    font-size: 2.4rem;
+    min-width: 5.6rem;
+    text-align: center;
+    line-height: 4rem;
+  }
+  .list .item__title {
+    margin-top: 0;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 2.8rem;
+  }
+  .list .item__text {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    color: #24053E;
+  }
+  .access {
+    margin-top: 23.5rem;
+    padding: 0 11.4583% 11rem;
+  }
+  .access__founder .founder {
+    width: 47.7rem;
+    height: 47.7rem;
+  }
+  .access__founder .card {
+    width: 73rem;
+    padding: 6.4rem;
+  }
+  .access__founder .card::after {
+    right: 7rem;
+    bottom: -6.5rem;
+  }
+  .access__founder .card .title {
+    font-size: 5.6rem;
+    line-height: 6.4rem;
+  }
+  .access__founder .card .text {
+    margin: 3.2rem 0;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
+  .access .social {
+    margin-top: 12.2rem;
   }
 }/*# sourceMappingURL=index.css.map */
