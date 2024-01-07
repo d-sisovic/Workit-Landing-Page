@@ -271,7 +271,7 @@ img {
     height: 43.6rem;
     padding: 3.2rem 3.9rem 0 3.9rem;
     background-position: -22.625rem 7.112rem, calc(100% + 9.368rem) 25rem;
-    background-image: url("assets/images/bg-pattern-1.svg"), url("assets/images/bg-pattern-2.svg");
+    background-image: url("/Workit-Landing-Page/assets/images/bg-pattern-1.svg"), url("/Workit-Landing-Page/assets/images/bg-pattern-2.svg");
   }
   .intro .curve {
     height: 14rem;
@@ -344,7 +344,7 @@ img {
     right: 0.75rem;
     bottom: -11.125rem;
     position: absolute;
-    content: url("assets/images/bg-pattern-3.svg");
+    content: url("/Workit-Landing-Page/assets/images/bg-pattern-3.svg");
   }
   .access__founder .card .title {
     font-size: 4.8rem;
