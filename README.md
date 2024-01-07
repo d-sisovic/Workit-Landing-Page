@@ -16,7 +16,7 @@ This is a solution to the [Workit landing page challenge on Frontend Mentor](htt
 ### Links
 
 - Solution URL: []
-- Live Site URL: []
+- Live Site URL: [https://d-sisovic.github.io/Workit-Landing-Page/]
 
 ### Built with
 
